@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="icons8-family--man-woman-boy-16.png" type="image/x-icon">
+
+    <!-- Google Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Libre+Baskerville&family=Nanum+Myeongjo:wght@700&family=Noto+Serif+Display:wght@600&family=Noto+Serif:ital,wght@0,100;0,300;0,400;1,300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Family Website</title>
+    <style>
+
+        /* For Hole Document */
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Container */
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Section Start */
+        .section{
+            height: 600px;
+            width: 548px;
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+            color: black;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+        .section h1{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            font-size: 4rem;
+            margin:30px;
+        }
+        .section p{
+            margin:30px;
+            font-size: 24px;
+            text-align: justify;
+            font-style: italic;
+        }
+
+
+        /* Main Start */
+        .familyimg{
+            margin-top: 5px;
+            height: 600px;
+            width: 800px;
+        }
+        .familyimg img{
+            height: 600px;
+            width: 800px;
+            border-radius: 10px;
+        }
+
+        /* Contnent Start */
+        .content{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column: 1/span 2;
+            /* grid-row: 2/span 3; */
+            justify-content: center;
+            align-items: center;
+        }
+        .content .content-text{
+            padding: 10px;
+            font-size: 20px;
+        }
+        .equal{
+            height: 180px;
+            border-left: 1px solid black;
+        }
+        .equal .imagearrow{
+            margin-top: 10px;
+            text-align: left;
+        }
+        .different{
+            text-align: center;
+        }
+        .different .btn{
+            padding: 8px 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            border-color: orange;
+            background-color: #079478;
+            font-weight: bold;
+            color: white;
+            text-decoration: underline black;
+            box-shadow: -2px -2px 1px 0px gray ,2px 4px 5px 1px gray ;
+            cursor: pointer;
+        }
+
+        /* Aside Start */
+        .sidecontent{
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 548px;
+            height: 600px;
+        }
+        .sidecontent img{
+            height: 600px;
+            width: 548px;
+        }
+
+        /* Footer Start */
+
+        .registraionform{
+            height: 600px;
+            width: 800px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            color: orangered;
+        }
+        .registraionform img{
+            height: 600px;
+            width: 800px;
+        }
+         #myform{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            width: 780px;
+            justify-content: center;
+            align-items: center;
+        }
+        .inputbox{
+            margin: 15px;
+        }
+        .inputbox label{
+            font-size: 20px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+        .inputbox input,textarea{
+            padding: 5px 15px;
+            border: 2px solid white;
+            background: transparent;
+            border-radius: 8px;
+            color: white;   
+        }
+        ::placeholder {
+        color: white;
+        opacity: 1;
+        }
+        .btn{
+            padding: 7px 15px;
+            border: 2px solid orangered;
+            border-radius: 6px;
+            font-size: 18px;
+            color: white;
+            background-color:#079478;
+            cursor: pointer;
+        }
+
+
+        /* Media Query 0px to 320px */
+        @media only screen and (max-width:320px){
+        .container{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+        .section{
+            height: 400px;
+            width: 280px;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+            grid-column: 1/span 3;
+        }
+        .section h1{
+            font-size: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .section p{
+            margin:30px;
+            font-size: 14px;
+            text-align: justify;
+            font-style: italic;
+            justify-content: center;
+            align-items: center;
+        }
+        .familyimg{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: 1/span 3;
+            margin-top: 30px;
+            height: 300px;
+            width: 250px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .familyimg img{
+            height: 300px;
+            width: 250px;
+            border-radius: 10px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            width: 280px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 25px;
+            grid-column: 1/span 3;
+            border: 3px solid black;
+        }
+        .content .content-text{
+            padding: 5px;
+            font-size: 13px;
+        }
+        .equal{
+            height: 210px;
+            width: 140px;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid black;
+        }
+        .different .btn{
+            padding: 5px 8px;
+            font-size: 13px;
+        }
+        .sidecontent{
+            width: 280px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: 1/span 3;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .sidecontent img{
+            width: 280px;
+            height: 400px;
+        }
+        .registraionform{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: 1/span 3;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            height: 400px;
+            width: 280px;
+        }
+        .registraionform img{
+            height: 400px;
+            width: 280px;
+        }
+         #myform{
+            height: 370px;
+            width: 260px;
+        }
+        .inputbox{
+            margin: 5px;
+        }
+        .inputbox label{
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        .inputbox input,textarea{
+            padding: 3px 10px;
+        }
+        .inputbox textarea{
+            height: 60px;
+        }
+        .btn{
+            padding: 3px 8px;
+            font-size: 13px;
+        }
+
+
+        }
+
+        /* Media Query form 321px to 768px */
+        @media only screen and (min-width:321px) and (max-width:768px){
+        .container{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+        .section{
+            height: 400px;
+            width: 370px;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+            grid-column: 1/span 3;
+        }
+        .section h1{
+            font-size: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .section p{
+            margin:30px;
+            font-size: 14px;
+            text-align: justify;
+            font-style: italic;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .familyimg{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: 1/span 3;
+            margin-top: 30px;
+            height: 300px;
+            width: 370px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .familyimg img{
+            height: 300px;
+            width: 370px;
+            border-radius: 10px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            width: 370px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 25px;
+            grid-column: 1/span 3;
+            border: 1px solid black;
+        }
+        .content .content-text{
+            padding: 5px;
+            font-size: 13px;
+        }
+        .equal{
+            height: 210px;
+            /* width: 140px; */
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid black;
+        }
+        .different .btn{
+            padding: 5px 8px;
+            font-size: 13px;
+        }
+        .sidecontent{
+            width: 370px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: 1/span 3;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .sidecontent img{
+            width: 370px;
+            height: 400px;
+        }
+        .registraionform{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: 1/span 3;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            height: 400px;
+            width: 370px;
+        }
+        .registraionform img{
+            height: 400px;
+            width: 370px;
+        }
+         #myform{
+            height: 370px;
+            width: 370px;
+        }
+        .inputbox{
+            margin: 5px;
+        }
+        .inputbox label{
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        .inputbox input,textarea{
+            padding: 3px 10px;
+        }
+        .inputbox textarea{
+            height: 60px;
+        }
+        .btn{
+            padding: 3px 8px;
+            font-size: 13px;
+        }
+        }
+
+
+        /* Media Query form 769px to 1345px */
+        @media only screen and (min-width:769px) and (max-width:1345) {
+        .container{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+        .section{
+            height: 700px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .section h1{
+            font-size: 3.5rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .section p{
+            margin:30px;
+            font-size: 1.5rem;
+            text-align: justify;
+            font-style: italic;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .familyimg{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+            height: 700px;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .familyimg img{
+            height: 700px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 25px;
+            border: 1px solid black;
+        }
+        .content .content-text{
+            padding: 5px;
+            font-size: 1rem;
+        }
+        .equal{
+            height: 150px;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid black;
+        }
+        .different .btn{
+            padding: 10px 15px;
+            font-size: 1rem;
+        }
+        .sidecontent{
+            width: 100%;
+            height: 600px;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .sidecontent img{
+            width: 100%;
+            height: 600px;
+        }
+        .registraionform{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            height: 600px;
+            width: 100%;
+        }
+        .registraionform img{
+            height: 600px;
+            width: 100%;
+        }
+         #myform{
+            height: 600px;
+            width: 100%;
+        }
+        .inputbox{
+            margin: 10px;
+        }
+        .inputbox label{
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .inputbox input,textarea{
+            padding: 8px 20px;
+        }
+        .inputbox textarea{
+            height: 90px;
+        }
+        .btn{
+            padding: 8px 15px;
+            font-size: 1.2rem;
+        }
+        } 
+
+
+        /* Media Query form 1346 */
+        @media only screen and (min-width:1346px){
+        .container{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            height: 100%;
+            width: 100%;
+        }
+        .section{
+            height: 700px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .section h1{
+            font-size: 3.5rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .section p{
+            margin:30px;
+            font-size: 1.5rem;
+            text-align: justify;
+            font-style: italic;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .familyimg{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+            height: 700px;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .familyimg img{
+            height: 700px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 25px;
+            border: 1px solid black;
+        }
+        .content .content-text{
+            padding: 5px;
+            font-size: 1rem;
+        }
+        .equal{
+            height: 150px;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid black;
+        }
+        .different .btn{
+            padding: 10px 15px;
+            font-size: 1rem;
+        }
+        .sidecontent{
+            width: 100%;
+            height: 600px;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .sidecontent img{
+            width: 100%;
+            height: 600px;
+        }
+        .registraionform{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            height: 600px;
+            width: 100%;
+        }
+        .registraionform img{
+            height: 600px;
+            width: 100%;
+        }
+         #myform{
+            height: 600px;
+            width: 100%;
+        }
+        .inputbox{
+            margin: 10px;
+        }
+        .inputbox label{
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .inputbox input,textarea{
+            padding: 8px 20px;
+        }
+        .inputbox textarea{
+            height: 90px;
+        }
+        .btn{
+            padding: 8px 15px;
+            font-size: 1.2rem;
+        }
+        } 
+    </style>
+</head>
+<body>
+    
+<div class="container">
+
+    <!-- Section Start -->
+    <section class="section">
+        <div class="text"><h1><span>Hello</span><span>Welcome</span><span>To The</span> <span>Family Website</span></h1>
+        <p>The purpose of the family is to maintain the well-being of its members and of society. Ideally, families offer predictability, structure, and safety as members mature and learn to participate in the community. Historically, most human societies use family as the primary locus of attachment, nurturance, and socialization.</p></div>
+        <!-- <img src="pexels-caleb-oquendo-3038455.jpg" alt=""> -->
+    </section>
+    <!-- Section End -->
+
+    <!-- FamilyImg Section Start -->
+    <section class="familyimg">
+        <img src="pexels-vika-glitter-1648396.jpg" alt="">
+    </section>
+    <!-- FamilyImg Section End -->
+
+    <!-- Main Start -->
+    <main class="content">
+        <div class="content-text different">
+            <button class="btn">Join Us</button>
+        </div>
+
+        <div class="content-text equal">Eat Well Global is a highly specialized strategic agency on a mission to empower global change agents in food and nutrition.
+           <div class="imagearrow"> <img src="59100_right_arrow_next_icon.png" alt=""></div>
+        </div>
+
+        <div class="content-text equal">From pregnancy to kids' health to parenting tips, get the facts and guidance you need to feel confident about the choices you make for you and your family.
+            <div class="imagearrow"><img src="59100_right_arrow_next_icon.png" alt=""></div>
+        </div>
+
+        <div class="content-text equal">A family-friendly job is one that offers flexible scheduling, support for parents and other perks like childcare to entice working parents.
+            <div class="imagearrow"><img src="59100_right_arrow_next_icon.png" alt=""></div>
+        </div>
+    </main>
+    <!-- Main End -->
+
+    <!-- Aside Start -->
+    <aside class="sidecontent">
+        <img src="pexels-kampus-production-5935180.jpg" alt="">
+    </aside>
+    <!-- Aside End -->
+
+    <!-- Footer Start -->
+    <footer class="registraionform">
+        <form id="myform">
+            <div class="inputbox">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter Full Name" autocomplete required>
+            </div>
+            <div class="inputbox">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Email" autocomplete required>
+            </div>
+            <div class="inputbox">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" autocomplete required>
+            </div>
+            <div class="inputbox">
+                <label for="phone">Phone Number</label>
+                <input type="phone" id="phone" placeholder="Enter Phone Number" autocomplete required>
+            </div>
+
+            <div class="inputbox">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="21" rows="8" placeholder="Enter Message Here"></textarea>
+            </div>
+
+            <button class="btn">Submit</button>
+        </form>
+        <img src="pexels-jeremy-mosley-3086736.jpg" alt="">
+    </footer>
+    <!-- Footer End -->
+</div>
+</body>
+</html>
